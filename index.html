@@ -45,6 +45,8 @@
 
     <div id="mycontent"> HTMlใหม่</div>
 
+    <a id="thislink" href="https://google.com" targer="_blank">Google</a>
+
 
     <script>
         console.log('Hello');
@@ -74,6 +76,7 @@
 
         function submitData(){
            console.log('ส่งข้อมูลแล้ว');  
+           btn.setAttribute('disabled','true')
         };
 
         function overItem(){
@@ -111,9 +114,11 @@
     contentHTML += '</ul>';
     let contentDOM=document.getElementById('Newcontent');
     contentDOM.innerHTML=contentHTML;
+    }
 
-
-      }
+    let thislinkDOM = document.getElementById('thislink');
+    console.log(thislinkDOM.getAttribute('href'));
+    thislinkDOM.setAttribute('href','https://youtube.com');
    
    </script>
 </body>
